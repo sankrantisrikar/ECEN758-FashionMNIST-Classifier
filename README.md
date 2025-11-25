@@ -22,8 +22,11 @@ It contains:
 - **10 classes:** T-shirt/top, Trouser, Pullover, Dress, Coat, Sandal, Shirt, Sneaker, Bag, Ankle Boot  
 
 **Citation (IEEE format):**  
-> H. Xiao, K. Rasul, and R. Vollgraf, “Fashion-MNIST: A Novel Image Dataset for Benchmarking Machine Learning Algorithms,”   
-> *arXiv preprint* arXiv:1708.07747, 2017. Available: https://github.com/zalandoresearch/fashion-mnist  
+[1] H. Xiao, K. Rasul, and R. Vollgraf, “Fashion-MNIST: a Novel Image Dataset for Benchmarking Machine Learning Algorithms,” arXiv preprint arXiv:1708.07747, 2017.
+[2] Y. LeCun, L. Bottou, Y. Bengio, and P. Haffner, “Gradient-Based Learning Applied to Document Recognition,” Proceedings of the IEEE, vol. 86, no. 11, pp. 2278–2324, 1998.
+[3] A. Krizhevsky, I. Sutskever, and G. Hinton, “ImageNet Classification with Deep Convolutional Neural Networks,” Advances in Neural Information Processing Systems, vol. 25, pp. 1097–1105, 2012.
+[4] A. Radford et al., “Learning Transferable Visual Models From Natural Language Supervision,” Proceedings of ICML, pp. 8748–8763, 2021.
+[5] I. T. Jolliffe and J. Cadima, “Principal Component Analysis: A Review and Recent Developments,” Philosophical Transactions of the Royal Society A, vol. 374, no. 2065, 2016.
 
 ---
 
