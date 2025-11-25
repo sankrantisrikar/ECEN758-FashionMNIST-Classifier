@@ -1,7 +1,15 @@
 ---
 layout: post
-title: "Fashion-MNIST Classification Using Traditional ML + PCA + CNN"
+title: "Fashion-MNIST Image Classification Using a Baseline CNN"
 date: 2025-11-25
+---
+
+### **Authors**
+**SATYAJIT**, **AKSHAY**, **DHRUV**,  
+**Srikar Sankranti**  
+*Department of Electrical & Computer Engineering*  
+*Texas A&M University*
+
 ---
 
 ## Introduction
@@ -69,8 +77,6 @@ We printed accuracy after each algorithm to compare:
 - Random Forest → XX%  
 - MLP → XX%  
 - CNN → **XX% (Best)**  
-
-(You can fill these values from your notebook.)
 
 ---
 
