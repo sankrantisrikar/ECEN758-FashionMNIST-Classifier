@@ -117,7 +117,7 @@ It predicts the closest class label.
 | **Tuned CNN** | **98%** |
 | **Zero-Shot CLIP Model** | **70%** |
 
-## Confusion Matrix
+## Confusion Matrix on Best Performing Model
 <img width="1102" height="989" alt="image" src="https://github.com/user-attachments/assets/c4113956-206c-4a1a-84cb-c035343d1e0f" />
 
 
