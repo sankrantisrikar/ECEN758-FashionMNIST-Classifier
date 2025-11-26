@@ -41,6 +41,10 @@ This structure makes Fashion-MNIST a strong benchmark for evaluating classical M
 - CNN used original **28×28×1** input format  
 - Labels encoded into integer categories (0–9)
 
+
+<img width="844" height="701" alt="image" src="https://github.com/user-attachments/assets/7c993ec9-cce0-464a-b9cc-da87acf16d1b" />
+
+
 ---
 
 ## Algorithms Used
