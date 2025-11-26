@@ -112,9 +112,3 @@ It predicts the closest class label.
 
 ---
 
-## PCA Visualization
-
-### **Explained Variance Plot**
-(Add your image here)
-```markdown
-![PCA Variance](/assets/images/pca_variance.png)
