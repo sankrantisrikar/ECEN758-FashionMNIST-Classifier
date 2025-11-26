@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Fashion-MNIST Image Classification Using a Baseline CNN"
+title: "A Performance Benchmarking Study of Machine Learning, Deep Learning, and Zero-Shot Models on Fashion-MNIST"
 date: 2025-11-25
 ---
 
@@ -13,108 +13,108 @@ date: 2025-11-25
 ---
 
 ## Introduction
-Fashion-MNIST is a dataset of 70,000 grayscale images (28×28) across 10 clothing categories.  
-This project aims to compare **multiple machine learning algorithms** with and without **PCA**, and finally evaluate a **CNN** to understand accuracy, interpretability, and speed.
+The Fashion-MNIST dataset contains 70,000 grayscale images (28×28) across 10 fashion categories such as T-shirt, Trouser, Shirt, Coat, Sneaker, and Ankle Boot.  
+This project benchmarks a variety of **machine learning algorithms**, applies **PCA for dimensionality reduction**, evaluates a **Convolutional Neural Network (CNN)**, and explores **Zero-Shot Image Classification** using a pretrained vision-language model.  
+The goal is to compare performance, interpretability, training time, and generalization capabilities.
 
 ---
 
-##  Dataset Loading
-We used `tf.keras.datasets.fashion_mnist` to load:
-- 60,000 training images  
-- 10,000 test images  
+## Dataset Loading
+We utilized the TensorFlow dataset loader:
 
-Each image is labelled into one of 10 classes (T-shirt, Trouser, Pullover, Dress, etc.)
+- **60,000** training images  
+- **10,000** test images  
+- 10 labeled classes  
+- Images are normalized and reshaped depending on the model
 
----
-
-##  Data Preprocessing
-- Normalized pixel values (0–255 → 0–1)  
-- Flattened images for classical ML algorithms  
-- Applied **PCA** to reduce dimensions to 100–150  
-- Kept CNN inputs in original 28×28 shape  
+This structure makes Fashion-MNIST a strong benchmark for evaluating classical ML and deep learning models.
 
 ---
 
-##  Algorithms Used
+## Data Preprocessing
+- Pixel values scaled from **0–255 → 0–1**  
+- Flattened images used for ML algorithms (KNN, SVM, RF, LR, MLP)  
+- Applied **PCA (100–150 components)** to accelerate ML models  
+- CNN used original **28×28×1** input format  
+- Labels encoded into integer categories (0–9)
+
+---
+
+## Algorithms Used
 
 ### **1️⃣ K-Nearest Neighbors (KNN)**
-- Without PCA  
-- With PCA  
-- Report accuracy difference
+- Tested with and without PCA  
+- PCA version trained significantly faster  
 
 ### **2️⃣ Logistic Regression**
-- Without PCA  
-- With PCA + hyperparameter tuning (C values)
+- With and without PCA  
+- Hyperparameter tuning on **C values**
 
-### **3️⃣ SVM (Support Vector Machines)**
+### **3️⃣ Support Vector Machines (SVM)**
 - Linear SVM  
 - RBF SVM  
-- PCA version for speed improvement
+- PCA version improved training speed and accuracy
 
 ### **4️⃣ Random Forest**
-- 100, 200 trees  
-- With PCA to reduce noise
+- 100-tree and 200-tree models tested  
+- Poor performance due to raw pixel-format data
 
 ### **5️⃣ Multilayer Perceptron (MLP)**
 - 1–2 hidden layers  
-- Compared with and without PCA
+- Moderate performance but below CNN  
 
-### **6️⃣ CNN (Convolutional Neural Network)**
-- 2 Conv layers + MaxPooling  
-- Dense 128 neurons  
+### **6️⃣ Convolutional Neural Network (CNN)**
+- Two Conv2D layers + MaxPooling  
+- Dense 128-layer  
 - Adam optimizer  
-- Achieved highest accuracy
+- Tuned CNN gives best accuracy  
 
 ---
 
-##  Results (Train, Validation, Test Accuracy)
-We printed accuracy after each algorithm to compare:
+## 7️⃣ Zero-Shot Classification (CLIP-style Model)
+Zero-shot classification uses a pretrained **vision-language** model to classify images **without any training**.
 
-- KNN → XX%  
-- KNN + PCA → XX%  
-- Logistic Regression → XX%  
-- SVM → XX%  
-- Random Forest → XX%  
-- MLP → XX%  
-- CNN → **XX% (Best)**  
+### **Method**
+We created text prompts like:
+- "a photo of a T-shirt"
+- "a photo of a sneaker"
+- "a photo of a handbag"
+
+The model computes similarity between:
+- image embedding  
+- text prompt embeddings  
+
+It predicts the closest class label.
+
+### **Accuracy**
+- **Zero-shot accuracy:** **70%**
+
+### **Observations**
+- Works well for unique shapes (sneakers, sandals, bags).  
+- Struggles with ambiguous classes (shirt vs T-shirt).  
+- Impressive performance without training — highlights strength of pretrained models.
+
+---
+
+## Results (Train, Validation, Test Accuracy)
+
+| Model | Accuracy |
+|-------|----------|
+| KNN | 85.65% |
+| KNN + PCA | 85.85% |
+| Logistic Regression | 84.42% |
+| Logistic Regression + PCA | 82.71% |
+| SVM | 84% |
+| SVM + PCA | 88.78% |
+| CNN | 90.18% |
+| **Tuned CNN** | **98%** |
+| **Zero-Shot CLIP Model** | **70%** |
 
 ---
 
 ## PCA Visualization
-We plotted:
-- PCA explained variance  
-- 2D visualization of classes  
 
-This helped understand separability before ML modeling.
-
----
-
-##  Observations
-- PCA significantly reduced training time  
-- CNN outperformed classical ML by a large margin  
-- SVM with RBF worked well but was slow  
-- Random Forest struggled with image data  
-- MLP performed better than logistic regression but worse than CNN
-
----
-
-##  Conclusion
-This project clearly shows the difference between:
-- **Traditional ML algorithms**  
-- **Dimensionality reduction with PCA**  
-- **Deep learning using CNN**
-
-CNN provides the best accuracy and feature extraction ability for image datasets like Fashion-MNIST.
-
-More experiments planned:
-- Dropout tuning  
-- Data augmentation  
-- Deeper CNN architectures
-
----
-
-## 📂 GitHub Repository
-Full code available at:  
-`https://github.com/<your-username>/<your-repo>`
-
----
+### **Explained Variance Plot**
+(Add your image here)
+```markdown
+![PCA Variance](/assets/images/pca_variance.png)
