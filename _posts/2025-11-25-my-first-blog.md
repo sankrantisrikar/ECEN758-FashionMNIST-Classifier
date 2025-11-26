@@ -16,6 +16,9 @@ date: 2025-11-25
 The Fashion-MNIST dataset contains 70,000 grayscale images (28×28) across 10 fashion categories such as T-shirt, Trouser, Shirt, Coat, Sneaker, and Ankle Boot.  
 This project benchmarks a variety of **machine learning algorithms**, applies **PCA for dimensionality reduction**, evaluates a **Convolutional Neural Network (CNN)**, and explores **Zero-Shot Image Classification** using a pretrained vision-language model.  
 The goal is to compare performance, interpretability, training time, and generalization capabilities.
+
+
+
 <img width="750" height="376" alt="image" src="https://github.com/user-attachments/assets/17a7fe80-4e8a-4b08-acdd-7810f197851f" />
 ---
 
