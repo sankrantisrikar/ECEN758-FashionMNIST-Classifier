@@ -1,6 +1,6 @@
 #  Fashion-MNIST Multi-Class Classifier  
 ### Texas A&M University | Fall 2025  
-**Instructor:** Dr. J. Peeples  **Team:** Satyajit | Srikar Sankranti | Dhruv Rachakonda | Akshay  
+Srikar Sankranti
 
 Notebook Link: https://colab.research.google.com/drive/1mzYdXVKQ3uj4jXXTijUVG_4Z6fF8KvVH?authuser=5#scrollTo=8SA3PHO7gO1e
 ---
